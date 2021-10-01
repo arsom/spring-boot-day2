@@ -26,4 +26,10 @@ public class EmployeeRepositoryTest {
         assertEquals("Arsom",result.get().getName());
     }
 
+    @Test
+    public void case02(){
+        Optional<Employee> result = employeeRepository.findById(1);
+        assertFalse(result.isPresent());
+    }
+
 }
